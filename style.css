@@ -1,0 +1,720 @@
+/* License: GNU General Public License */
+/* ----------- Fonts --------------- */
+
+@font-face {
+  font-family: 'Ostrich';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ostrich Sans Medium'), url('fonts/ostrich-regular.ttf');
+}
+@font-face {
+  font-family: 'Ostrich';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Ostrich Sans Black'), url('fonts/ostrich-black.ttf');
+}
+/*
+@font-face {
+  font-family: 'Ostrich';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Ostrich Sans Light'), url('fonts/ostrich-light.ttf');
+}
+@font-face {
+  font-family: 'Ostrich';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Ostrich Sans Bold'), url('fonts/ostrich-bold.ttf');
+}
+@font-face {
+  font-family: 'Ostrich Dashed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ostrich Sans Dashed Medium'), url('fonts/ostrich-dashed.ttf');
+}
+@font-face {
+  font-family: 'Ostrich Rounded';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ostrich Sans Rounded Medium'), url('fonts/ostrich-rounded.ttf');
+}
+*/
+
+/* ---------- Scrollbar ------------ */
+
+/* ---------- Background ----------- */
+*{
+	box-sizing: border-box;
+}
+body{
+	padding:0;
+	margin:0;
+	font-family:'Lato','Sans';
+	font-weight: 300;
+	font-size: 16px;
+	color: rgba(16, 25, 37, 0.77);
+	background: #FF6464;
+	background-image: url('img/bg2.png');
+	/*background-image: -webkit-linear-gradient(0deg,#DFFFAE,#FFF730);*/
+}
+h1, h2, h3, h4, h5{
+	font-family: 'Raleway';
+	font-weight: 200;
+}
+a{
+	text-decoration: inherit;
+	color: inherit;
+	font-weight: inherit;
+}
+
+body > .bg{
+	z-index: -5000;
+	position: fixed;
+	left:-20px; right:-20px; top:-20px; bottom:-20px;
+}
+body > .bg img{
+	min-width:100%;
+	min-height:100%;
+	position: absolute;
+	bottom: 0;
+}
+
+body > .bgnoise{
+	z-index: -4000;
+	position: fixed;
+	left:0; right:0; top:0; bottom:0;
+	/*background: url('bg.png');*/
+	opacity:0;
+}
+body > .bgnoise.one{
+	display: none;
+	z-index: -3900;
+	background: url('img/noise.gif');
+	opacity: 0.04;
+}
+body > .bgnoise.two{
+	display: none;
+	z-index: -3900;
+	background: url('bg.png');
+	opacity: 0.6;
+}
+
+body > .vignette{
+	z-index: -3000;
+	position: fixed;
+	left:0; right:0; top:0; bottom:0;
+	background-image: -webkit-radial-gradient(rgba(0,0,0,0),rgba(80, 0, 153, 0.34));
+}
+
+/* ---------- Header ----------- */
+#site-title{
+	font-family: 'Ostrich';
+	font-weight: 400;
+	font-size: 92px;
+	color: white;
+	word-spacing: -4px;
+	text-align: center;
+	margin: 0px;
+	text-shadow: 0px 2px #FF8383, 0px 2px 4px #B60000;
+}
+#site-title .the{
+	font-size: 0.5em;
+	vertical-align: top;
+	font-style: italic;
+}
+#site-description{
+	font-family: 'Ostrich';
+	opacity: 0.5;
+	font-size: 33px;
+	text-align: center;
+	margin: 9px 0px 0px 0px;
+	word-spacing: -2px;
+	position: relative;
+	left: 4px;
+}
+hgroup{
+	margin: 0px;
+}
+
+.hnav{
+	margin: 40px 0px;
+	text-align: center;
+}
+.navicon{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	border: solid 1px rgba(0,0,0,0.05);
+	border-radius: 5px;
+	margin-right: 10px;
+	-webkit-transition: all 150ms linear
+}
+.navicon:active{
+	background: rgba(206, 72, 72, 0.4);
+	box-shadow: 0px 3px rgb(204, 76, 76) inset;
+}
+.navicon i{
+	font-size: 28px;
+	opacity: 0.5;
+	position: relative;
+	top: 10px;
+	-webkit-transition: all 150ms linear;
+}
+.navicon:hover i{
+	font-size: 34px;
+	top: 7px;
+	opacity: 0.6
+}
+.navicon:active i{
+	top:10px
+}
+.headerpage {
+	padding: 20px;
+	background: rgba(192, 71, 71, 0.4);
+	border: solid 1px rgba(0, 0, 0, 0.09);
+	box-shadow: 0px 5px rgb(211, 72, 72) inset;
+	border-radius: 5px;
+	margin-bottom: 40px;
+	color: rgba(255, 255, 255, 0.84);
+	font-family: 'Lato';
+}
+.headerpages h1 {
+	opacity: 0.9;
+	color: white;
+	font-family: Ostrich;
+	font-size: 42px;
+	font-weight: 400;
+	text-shadow: 0px 1px rgb(255, 131, 131),0px 2px rgb(255, 131, 131) ,0px 2px 2px rgba(209, 4, 4, 0.88);
+	margin: 5px 0px;
+}
+
+/* =Structure
+-------------------------------------------------------------- */
+input[type=submit]{
+	background: rgba(0,0,0,0.4);
+	padding:4px;
+	padding-left:6px;
+	padding-right:6px;
+	border: none;
+	outline: none;
+	color: white;
+	border-radius:2px;
+	margin: 0px;
+	cursor: pointer;
+}
+#page {
+	position: relative;
+	width: 530px;
+	margin-top:40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#primary {
+	float: left;
+	margin: 0 -240px 0 0;
+	width: 100%;
+}
+#content > article {
+	position: relative;
+	padding: 30px;
+	margin-bottom: 40px;
+	border-radius: 2px;
+	text-align: justify;
+	/*box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.06), 0px 3px 6px rgba(194, 39, 39, 0.16);*/
+	box-shadow: 0px 2px #FF8383, 0px 2px 4px #B60000;
+	font-family: 'Lato';
+	font-weight: 300;
+	background: white;
+}
+
+
+
+#colophon {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+/* Increase the size of the content area for templates without sidebars */
+.full-width #content,
+.image-attachment #content,
+.error404 #content {
+	margin: 0;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ------------------ Sidebar ------------------- */
+
+#main .widget-area {
+	position: absolute;
+	right: 0px;
+	margin-top: 0px;
+	margin-right: -252px;
+	width: 222px;
+	color: rgba(255,255,255,0.95);
+	/* text-shadow: 0px 1px rgba(255, 255, 255, 0.2); */
+}
+.widget-area input[type=text]{
+	background: rgba(255,255,255,0.2);
+	border-radius:2px;
+	border: none;
+	padding: 4px;
+	padding-left: 6px;
+	padding-right: 6px;
+	color: white;
+	box-shadow: 0px 1px 1px rgba(2, 2, 43, 0.45) inset;
+	-webkit-transition: box-shadow 150ms linear;
+}
+.widget-area input[type=text]:focus{
+	outline: none;
+	border: none;
+	box-shadow: 0px 0px 3px rgba(255, 255, 355, 0.8) inset, 0px 0px 1px rgba(0, 0, 0, 0.72);
+	-webkit-transition: box-shadow 150ms linear;
+}
+/* ------------------ Content ------------------- */
+
+.sticky {
+}
+
+.entry-meta {
+	clear: both;
+	display: block;
+	opacity: 0.5;
+	font-size: 11px;
+	font-weight: 400;
+	text-align: right;
+}
+.single-author .entry-meta .byline {
+	display: none;
+}
+#content code {
+	font-family: Inconsolata;
+}
+#content pre {
+	background: rgb(250,250,250);
+	border-radius: 2px;
+	padding: 10px 30px;
+	margin:  5px -30px;
+	overflow-x: auto;
+	font-size: 13px;
+}
+#content pre code{
+	font-size: 13px;
+}
+body *::-webkit-scrollbar{
+	width:8px;
+	height:8px;
+}
+body *::-webkit-scrollbar-track{
+	background: #EEE;
+	border: solid 1px #E2E2E2;
+}
+body *::-webkit-scrollbar-thumb{
+	background: #DDD;
+	-webkit-transition: all 250ms linear;
+}
+body *::-webkit-scrollbar-thumb:hover{
+	background: #555;
+}
+#content h1,#content h2,#content h3,#content h4,#content h5{
+	font-weight: 300;
+}
+#content h1.entry-title{
+	margin-top:0px;
+}
+#content blockquote {
+	background: white;
+	padding: 10px 30px;
+	margin: 5px -30px;
+	text-align: center;
+}
+#content blockquote p{
+	margin: 5px;
+	line-height: 22px;
+	font-size: 18px;
+
+}
+#content .wp-caption{
+	display: block;
+	box-sizing: content-box;
+	margin: 30px -30px;
+	text-align: center;
+	padding: 0px;
+	width: auto !important;
+}
+#content .entry-content .wp-caption a{
+	background: none;
+	padding: 0px;
+}
+#content .wp-caption img{
+	border-radius: 1px;
+	border: 0px;
+	margin: 0px;
+}
+#content .wp-caption .wp-caption-text{
+	margin:10px;
+	font-style: italic;
+
+}
+#content .entry-content{
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+#content .entry-content > p{
+}
+#content .entry-content ul > li{
+	list-style: none;
+}
+#content .entry-content ul > li:before{
+	content: '\2022';
+	display: block;
+	position: relative;
+	max-width: 0px;
+	max-height: 0px;
+	left: -15px;
+	top: -4px;
+	color: rgb(200,200,200);
+	font-size: 1.3em;
+}
+#content .entry-content a {
+	color: rgb(16,16,16);
+	background: rgba(0,0,0,0.02);
+	padding: 0px 4px;
+	border-radius: 2px;
+	-webkit-transition: background 150ms linear;
+}
+#content .entry-content a:hover {
+	background: rgba(0,0,0,0.07);
+}
+#content nav {
+	display: block;
+	overflow: hidden;
+}
+#content nav .nav-previous {
+	float: left;
+	width: 50%;
+}
+#content nav .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#content #nav-above {
+	display: none;
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+	display: block;
+}
+#nav-below {
+	margin: 1em 0 0;
+}
+.page-link {
+	clear: both;
+	margin: 0 0 1em;
+}
+.page .edit-link {
+	clear: both;
+	display: block;
+}
+
+/* 404 page */
+.error404 .widget {
+	float: left;
+	width: 33%;
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+	margin-right: 1em;
+}
+.error404 .widget_tag_cloud {
+	clear: both;
+	float: none;
+	width: 100%;
+}
+
+/* Notices */
+.post .notice,
+.error404 #searchform {
+	background: #eee;
+	display: block;
+	padding: 1em;
+}
+
+/* Image Attachments */
+.image-attachment div.entry-meta {
+	float: left;
+}
+.image-attachment nav {
+	float: right;
+	margin: 0 0 1em 0;
+}
+.image-attachment .entry-content {
+	clear: both;
+}
+.image-attachment .entry-content .entry-attachment {
+	background: #eee;
+	margin: 0 0 1em;
+	padding: 1em;
+	text-align: center;
+}
+.image-attachment .entry-content .attachment {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Aside Posts */
+.format-aside .entry-header {
+	display: none;
+}
+.single .format-aside .entry-header {
+	display: block;
+}
+.format-aside .entry-content,
+.format-aside .entry-summary {
+	padding-top: 1em;
+}
+.single .format-aside .entry-content,
+.single .format-aside .entry-summary {
+	padding-top: 0;
+}
+
+/* Gallery Posts */
+.format-gallery .gallery-thumb {
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+/* Image Posts */
+.format-image .entry-header {
+	display: none;
+}
+.single .format-image .entry-header {
+	display: block;
+}
+.format-image .entry-content,
+.format-image .entry-summary {
+	padding-top: 1em;
+}
+.single .format-image .entry-content,
+.single .format-image .entry-summary {
+	padding-top: 0;
+}
+
+
+/* =Images
+-------------------------------------------------------------- */
+
+a img {
+	border: none;
+}
+p img {
+	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img,
+
+img.alignleft {
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+}
+.wp-caption {
+	text-align: center;
+}
+.wp-caption img {
+	max-width: 100% !important; /* When images are too wide for containing element, force them to fit. */
+	height: auto !important;  /* Override height to match resized width for correct aspect ratio. */
+}
+.wp-caption .wp-caption-text {
+	margin: 10px;
+}
+.gallery-caption {
+}
+.wp-smiley {
+	margin: 0;
+}
+
+
+/* =Forms
+-------------------------------------------------------------- */
+
+#searchform label {
+	display: none;
+}
+#searchform input#s {
+	width: 125px;
+	margin-right: 0px;
+}
+input[type=text],
+input#s {
+	margin: 0 1em 0 0;
+	width: 60%;
+}
+textarea {
+	width: 80%;
+}
+
+/* Class for labelling required form items */
+.required {
+	color: #cc0033;
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+#comments{
+	position: relative;
+	padding: 20px;
+	padding-top: 1px;
+	padding-bottom: 10px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	text-align: justify;
+	border-radius: 2px;
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.24);
+	text-shadow: none;
+	font-family: 'Lato';
+	font-weight: 300;
+	background: rgba(0, 0, 0, 0.19);
+	color: white;
+}
+#comments .commentlist{
+	display: block;
+	list-style:none;
+	padding: 0px;
+}
+#comments li.comment{
+	margin-left: -20px;
+	margin-right:-20px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top: 5px;
+	padding-bottom:5px;
+	border-bottom: solid 1px rgba(0,0,0,0.08);
+}
+#comments .commentlist li:first-child{
+	border-top: solid 1px rgba(0,0,0,0.08);
+}
+#comments .comment-author{
+	margin-top: 10px;
+}
+#comments .reply{
+	margin-bottom: 10px;
+}
+#comments li.comment .reply{
+	text-align: right;
+}
+#comments li.comment footer .comment-meta{
+	display:none;
+}
+#comments li.comment footer img {
+	display:none;
+}
+#comments li.comment footer .says {
+	display:none;
+}
+#respond input[type=text], #respond textarea {
+	margin-top: 5px;
+	background: rgba(0, 0, 0, 0.06);
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.09);
+	border: none;
+	outline: none;
+	padding: 4px;
+	padding-left: 6px;
+	display: block;
+	width: 50%;
+	color: white;
+	-webkit-transition: all 150ms linear;
+}
+#respond input[type=text]:focus, #respond textarea:focus {
+	background: rgba(0, 0, 0, 0.18);
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+#respond textarea {
+	width: 100%;
+}
+#respond .form-allowed-tags {
+	clear: both;
+	width: 100%;
+	font-size: 10px;
+	opacity: 0.5;
+}
+
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget-title{
+	margin-top: 0px;
+	margin-bottom: 4px;
+	font-family: 'Ostrich';
+	font-weight: 900;
+	text-shadow: none;
+	color: white;
+	font-size: 18px;
+	text-shadow: 0px 2px #FF8383, 0px 2px 3px #B60000;
+}
+.widget{
+	display: block;
+	margin-bottom: 20px;
+	border-radius: 2px;
+	padding: 12px;
+	background: #FF6C6C;
+	box-shadow: 0px 0px 0px 1px #FF7C7C inset,0px 2px #FF5151, 0px 2px 4px #D60B0B;
+}
+.widget.widget_search{
+	background: none;
+	padding: 0px;
+	box-shadow: none;
+	border-radius: 0px;
+}
+#searchsubmit{
+	float: right;
+}
+.textwidget{
+	text-align: justify;
+	font-size: 13px;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#colophon {
+	padding: 1em 0 0;
+}
