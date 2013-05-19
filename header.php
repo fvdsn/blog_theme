@@ -24,7 +24,9 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/blog.js" type="text/javascript"></script>
 <link href='http://fonts.googleapis.com/css?family=Raleway:300|Lato:300,400|Inconsolata' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
 <title><?php
 	/*
@@ -81,17 +83,30 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav>-->
 		<nav class='hnav' role='navigation'>
-			<a class='navicon' href='#'><i class='icon-info'></i></a>
-			<a class='navicon' href='#'><i class='icon-picture'></i></a>
-			<a class='navicon' href='#'><i class='icon-keyboard'></i></a>
-			<a class='navicon' href='#'><i class='icon-github'></i></a>
-			<a class='navicon' href='#'><i class='icon-twitter-sign'></i></a>
+			<a class='navicon' attr-dst='about'   href='#'><i class='icon-info'></i></a>
+			<a class='navicon' attr-dst='gallery' href='#'><i class='icon-picture'></i></a>
+			<a class='navicon' attr-dst='code'    href='#'><i class='icon-keyboard'></i></a>
+			<a class='navicon' attr-dst='github'  href='#'><i class='icon-github'></i></a>
+			<a class='navicon' attr-dst='twitter' href='#'><i class='icon-twitter-sign'></i></a>
 		</nav>
-		<section class='headerpages'>
-			<div class='headerpage'>
+		<section class='headerpages hidden'>
+			<div class='headerpage about hidden'>
 			<h1>About</h1>
 			<p>BlaBlaBlaBla...</p>
 			<p>BlaBlaBlaBla...</p>
+			</div>
+			<div class='headerpage gallery hidden'>
+			<h1>Gallery</h1>
+			<p>BlaBla...</p>
+			</div>
+			<div class='headerpage code hidden'>
+			<h1>Code</h1>
+			<p>BlaBlaBlaBla...</p>
+			<p>BlaBlaBlaBla...</p>
+			</div>
+				<div class='headerpage github hidden'>
+			<h1>GitHub</h1>
+			<p>gooefjeosfjesf </p>
 			</div>
 		</section>
 	</header><!-- #branding -->
