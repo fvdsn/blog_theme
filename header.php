@@ -93,7 +93,7 @@
 			<h1>About</h1>
             <p>
                 My name is Frédéric van der Essen. I am a computer engineer and designer working in Belgium, developing Open-Source
-                JavaScript applications at <a href='http://www.openerp.com'>OpenERP</a>. 
+                JavaScript applications at <a href='http://www.openerp.com'>OpenERP</a>
             </p>
             <p> You can contact me by mail:
                 <ul>
@@ -107,17 +107,31 @@
 			<p>Not ready yet :/</p>
 			</div>
 			<div id='code' class='headerpage hidden'>
-			<h1>Programming Projects</h1>
-			<p>BlaBlaBlaBla...</p>
-			<p>BlaBlaBlaBla...</p>
+			<h1>Coding Projects</h1>
+			<p>Completed Works:</p>
+            <ul>
+                <li><a href='https://play.google.com/store/apps/details?id=com.mentalwarp.jnb'>Bloody Bunnies</a> A 2.5D Multiplayer platform game for android &amp; iOS</li>
+                <li><a href='http://www.openerp.com'>OpenERP's Point of Sale</a> An OpenSource WebApp to run your shop</li>
+            </ul>
+			<p>Work in Progress:</p>
+            <ul>
+                <li><a href='https://github.com/fvdsn/Modula.js'>MODULA.JS</a> A HTML5 2D Game engine</li>
+                <li><a href='https://github.com/fvdsn/ZSON'>ZSON</a>A fast binary serialisation format for the web</li>
+            </ul>
 			</div>
 			<div id='github' class='headerpage hidden'>
 			<h1>GitHub</h1>
-			<p>gooefjeosfjesf </p>
+            <p>Most of my work can be found on github</p>
+            <ul>
+                <li><a href='https://github.com/fvdsn'>http://github.com/fvdsn</a></li>
+            </ul>
 			</div>
 			<div id='twitter' class='headerpage hidden'>
 			<h1>Twitter</h1>
-			<p>gooefjeosfjesf </p>
+            <p>For news and cool links, check out my twitter:</p>
+            <ul>
+                <li><a href='https://twitter.com/fvdsn'>http://twitter.com/fvdsn</a></li>
+            </ul>
 			</div>
 		</section>
 	</header><!-- #branding -->
