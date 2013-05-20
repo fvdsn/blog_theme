@@ -62,7 +62,6 @@
 
 <body <?php body_class(); ?>>
 
-    <div class='bgnoise one'></div>
 	
 	<div id="page" class="hfeed">
 <?php do_action( 'before' ); ?>
