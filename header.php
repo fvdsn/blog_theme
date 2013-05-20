@@ -82,29 +82,33 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav>-->
 		<nav class='hnav' role='navigation'>
-			<a class='navicon' attr-dst='about'   href='#'><i class='icon-info'></i></a>
-			<a class='navicon' attr-dst='gallery' href='#'><i class='icon-picture'></i></a>
-			<a class='navicon' attr-dst='code'    href='#'><i class='icon-keyboard'></i></a>
-			<a class='navicon' attr-dst='github'  href='#'><i class='icon-github'></i></a>
-			<a class='navicon' attr-dst='twitter' href='#'><i class='icon-twitter-sign'></i></a>
+			<a class='navicon' href='#about'><i class='icon-info'></i></a>
+			<a class='navicon' href='#gallery'><i class='icon-picture'></i></a>
+			<a class='navicon' href='#code'><i class='icon-keyboard'></i></a>
+			<a class='navicon' href='#github'><i class='icon-github'></i></a>
+			<a class='navicon' href='#twitter'><i class='icon-twitter-sign'></i></a>
 		</nav>
 		<section class='headerpages hidden'>
-			<div class='headerpage about hidden'>
+			<div id='about' class='headerpage hidden'>
 			<h1>About</h1>
 			<p>BlaBlaBlaBla...</p>
 			<p>BlaBlaBlaBla...</p>
 			</div>
-			<div class='headerpage gallery hidden'>
+			<div id='gallery' class='headerpage hidden'>
 			<h1>Gallery</h1>
 			<p>BlaBla...</p>
 			</div>
-			<div class='headerpage code hidden'>
+			<div id='code' class='headerpage hidden'>
 			<h1>Code</h1>
 			<p>BlaBlaBlaBla...</p>
 			<p>BlaBlaBlaBla...</p>
 			</div>
-				<div class='headerpage github hidden'>
+			<div id='github' class='headerpage hidden'>
 			<h1>GitHub</h1>
+			<p>gooefjeosfjesf </p>
+			</div>
+			<div id='twitter' class='headerpage hidden'>
+			<h1>Twitter</h1>
 			<p>gooefjeosfjesf </p>
 			</div>
 		</section>
