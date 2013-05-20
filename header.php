@@ -91,15 +91,23 @@
 		<section class='headerpages hidden'>
 			<div id='about' class='headerpage hidden'>
 			<h1>About</h1>
-			<p>BlaBlaBlaBla...</p>
-			<p>BlaBlaBlaBla...</p>
+            <p>
+                My name is Frédéric van der Essen. I am a computer engineer and designer working in Belgium, developing Open-Source
+                JavaScript applications at <a href='http://www.openerp.com'>OpenERP</a>. 
+            </p>
+            <p> You can contact me by mail:
+                <ul>
+                <li><a href=mailto:fvdessen+x@gmail.com>fvdessen+x@gmailcom</a></li>
+                <li><a href=mailto:fva+x@openerp.com>fva+x@openerp.com</a> for OpenERP related matters</li>
+            </p>
+                
 			</div>
 			<div id='gallery' class='headerpage hidden'>
-			<h1>Gallery</h1>
-			<p>BlaBla...</p>
+			<h1>Portfolio</h1>
+			<p>Not ready yet :/</p>
 			</div>
 			<div id='code' class='headerpage hidden'>
-			<h1>Code</h1>
+			<h1>Programming Projects</h1>
 			<p>BlaBlaBlaBla...</p>
 			<p>BlaBlaBlaBla...</p>
 			</div>
