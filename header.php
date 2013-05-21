@@ -22,7 +22,7 @@
 <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=600" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/blog.js" type="text/javascript"></script>
 <link href='http://fonts.googleapis.com/css?family=Raleway:300|Lato:300,400|Inconsolata' rel='stylesheet' type='text/css'>

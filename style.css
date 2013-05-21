@@ -55,12 +55,21 @@ body{
 	font-weight: 300;
 	font-size: 16px;
 	color: rgba(16, 25, 37, 0.77);
-	background: #FF6464;
+	background: rgb(240,73,73); /*#FF6464;*/
 	background-image: url('img/bg3-red.png');
 	background-size: cover;
 	background-attachment: fixed;
 	/*background-image: -webkit-linear-gradient(0deg,#DFFFAE,#FFF730);*/
 }
+@media only screen and (max-width:768px){
+    html body{
+	    background-image: url('img/bg3-red-alpha.png');
+        background-size: 100%;
+        background-attachment: scroll;
+        background-repeat: repeat-x;
+    }
+}
+
 h1, h2, h3, h4, h5{
 	font-family: 'Raleway';
 	font-weight: 200;
