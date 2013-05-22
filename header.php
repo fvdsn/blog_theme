@@ -82,58 +82,39 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav>-->
 		<nav class='hnav' role='navigation'>
-			<a class='navicon' href='#about'><i class='icon-info'></i></a>
-			<a class='navicon' href='#gallery'><i class='icon-picture'></i></a>
-			<a class='navicon' href='#code'><i class='icon-keyboard'></i></a>
-			<a class='navicon' href='#github'><i class='icon-github'></i></a>
-			<a class='navicon' href='#twitter'><i class='icon-twitter-sign'></i></a>
+			<a class='navicon' href='#about'><i class='icon-info-sign'></i><span class='label'>about</span></a>
 		</nav>
-		<section class='headerpages hidden'>
-			<div id='about' class='headerpage hidden'>
-			<h1>About</h1>
-            <p>
-                My name is Frédéric van der Essen. I am a computer engineer and designer working in Belgium, developing Open-Source
-                JavaScript applications at <a href='http://www.openerp.com'>OpenERP</a>
-            </p>
-            <p> You can contact me by mail:
+		<article class='headerpages hidden'>
+			<section id='about' class='headerpage hidden'>
+                <h1>About</h1>
+                <p>
+                    My name is Frédéric van der Essen. I am a computer engineer and designer working in Belgium, developing Open-Source
+                    JavaScript applications at <a href='http://www.openerp.com'>OpenERP</a>
+                </p>
+                <p> 
+                    You can contact me by mail:
+                    <ul>
+                        <li><a href=mailto:fvdessen+x@gmail.com>fvdessen+x@gmailcom</a></li>
+                        <li><a href=mailto:fva+x@openerp.com>fva+x@openerp.com</a> for OpenERP related matters</li>
+                    </ul>
+                    Or follow me on Twitter:
+                    <ul>
+                        <li><a href='https://twitter.com/fvdsn'>http://twitter.com/fvdsn</a></li>
+                    </ul>
+                </p>
+                <h2>Projects</h2>
                 <ul>
-                <li><a href=mailto:fvdessen+x@gmail.com>fvdessen+x@gmailcom</a></li>
-                <li><a href=mailto:fva+x@openerp.com>fva+x@openerp.com</a> for OpenERP related matters</li>
-            </p>
-                
-			</div>
-			<div id='gallery' class='headerpage hidden'>
-			<h1>Portfolio</h1>
-			<p>Not ready yet :/</p>
-			</div>
-			<div id='code' class='headerpage hidden'>
-			<h1>Coding Projects</h1>
-			<p>Completed Works:</p>
-            <ul>
-                <li><a href='https://play.google.com/store/apps/details?id=com.mentalwarp.jnb'>Bloody Bunnies</a> A 2.5D Multiplayer platform game for android &amp; iOS</li>
-                <li><a href='http://www.openerp.com'>OpenERP's Point of Sale</a> An OpenSource WebApp to run your shop</li>
-            </ul>
-			<p>Work in Progress:</p>
-            <ul>
-                <li><a href='https://github.com/fvdsn/Modula.js'>MODULA.JS</a> A HTML5 2D Game engine</li>
-                <li><a href='https://github.com/fvdsn/ZSON'>ZSON</a>A fast binary serialisation format for the web</li>
-            </ul>
-			</div>
-			<div id='github' class='headerpage hidden'>
-			<h1>GitHub</h1>
-            <p>Most of my work can be found on github</p>
-            <ul>
-                <li><a href='https://github.com/fvdsn'>http://github.com/fvdsn</a></li>
-            </ul>
-			</div>
-			<div id='twitter' class='headerpage hidden'>
-			<h1>Twitter</h1>
-            <p>For news and cool links, check out my twitter:</p>
-            <ul>
-                <li><a href='https://twitter.com/fvdsn'>http://twitter.com/fvdsn</a></li>
-            </ul>
-			</div>
-		</section>
+                    <li><a href='https://play.google.com/store/apps/details?id=com.mentalwarp.jnb'>Bloody Bunnies</a> A 2.5D Multiplayer platform game for android &amp; iOS</li>
+                    <li><a href='http://www.openerp.com'>OpenERP's Point of Sale</a> An OpenSource WebApp to run your shop</li>
+                </ul>
+                <h3>Work in Progress:</h3>
+                <ul>
+                    <li><a href='https://github.com/fvdsn/Modula.js'>MODULA.JS</a> A HTML5 2D Game engine</li>
+                    <li><a href='https://github.com/fvdsn/ZSON'>ZSON</a>A fast binary serialisation format for the web</li>
+                    <li><a href='https://github.com/fvdsn'>http://github.com/fvdsn</a> My github page</li>
+                </ul>
+			</section>
+		</article>
 	</header><!-- #branding -->
 
 	<div id="main">
