@@ -1,4 +1,8 @@
 /* License: GNU General Public License */
+/* ---- Code Syntax Highlighting --- */
+
+@import url(syntax.css);
+
 /* ----------- Fonts --------------- */
 
 @font-face {
