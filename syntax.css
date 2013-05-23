@@ -43,7 +43,7 @@ pre .tex .command,
 pre .tex .special,
 pre .erlang_repl .function_or_atom,
 pre .markdown .header {
-  color: #800;
+  color: rgb(255, 66, 66);
 }
 
 pre .comment,
@@ -52,7 +52,7 @@ pre .template_comment,
 pre .diff .header,
 pre .chunk,
 pre .markdown .blockquote {
-  color: #888;
+  color: rgb(78, 148, 202);
 }
 
 pre .number,
@@ -65,7 +65,7 @@ pre .go .constant,
 pre .change,
 pre .markdown .bullet,
 pre .markdown .link_url {
-  color: #080;
+  color: rgb(92, 0, 255);
 }
 
 pre .label,
@@ -92,7 +92,7 @@ pre .markdown .link_label,
 pre .vhdl .attribute,
 pre .clojure .attribute,
 pre .coffeescript .property {
-  color: #88F
+  color: rgb(255, 66, 66);
 }
 
 pre .keyword,
